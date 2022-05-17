@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {connect} from 'react-redux'
-import { setTodo } from '../../redux/todos/Actions'
+import { setTodo } from '../../redux'
 const Create = ({setTodo,todo}) => {
     const [todoState, setTodoState] = useState(
         {
