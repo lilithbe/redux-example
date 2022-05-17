@@ -1,0 +1,1 @@
+### yarn add redux react-redux redux-devtools-extension redux-logger redux-thunk
