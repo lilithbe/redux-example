@@ -3,9 +3,9 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 import logger from 'redux-logger'
 import thunk from 'redux-thunk'
 import rootReducer from './rootReducer'
-
+const isDev= process.env.REACT_APP_TYPE==='development'?true:false
 const store = createStore(
     rootReducer,
-    composeWithDevTools(applyMiddleware(logger,thunk))
+    isDev?composeWithDevTools(applyMiddleware(logger,thunk)):applyMiddleware(thunk)
 )
 export default store
